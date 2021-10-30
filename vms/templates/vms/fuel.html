@@ -1,0 +1,79 @@
+
+
+{% load static %}
+
+<html>
+    <head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuel Details</title>
+
+        <link rel="stylesheet"  href={% static 'css/login.css' %}>
+        <link rel="stylesheet" href={% static 'css/landing_page.css' %}>
+        <link rel="stylesheet" href={% static "css/select.css" %}>
+
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="sweetalert2/sweetalert2.css">
+    <script src="sweetalert2/sweetalert2.min.js"></script>
+  
+ 
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body style="background-color:white";>
+            <div class="container">
+	<center>
+                <div class="details">
+                 <a href="/index"><button class="btn">Back</button></a>
+                 <a href="/Logout"><button class="btn">Logout</button></a><br/><br/>
+	 </div>   
+               </center>
+      
+           <form action="fuel.php" method="POST">
+		   <div class="details">
+		  <center> <h2>Fuel Details</h2></center><br>
+           
+  
+           
+            <div class="custom-select" style="width:200px;">
+              <select name="F_type" >
+                <option disabled>Fuel type</option>
+               <option value="Petrol">Petrol</option>
+               <option value="Diesel">Diesel</option>
+               <option value="Gas">Gas</option>
+             </select>
+             </div>
+           
+           
+           
+            <input type="text" name="Expenses" placeholder="Expenses" required="required" /> <br/></tr>
+           <input type="text" name="Litres" placeholder="Litres" required="required" /> <br/></tr>
+            <input id="Date" type="text" class="form-control" name="Date" placeholder="Date"><br/>
+            <input type="text" name="V_id" placeholder="V_id" required="required" /> <br/></tr>  
+                 
+                 <script>
+                      $( function() {
+                        $( "#Date" ).datepicker(
+                          {
+                            dateFormat: 'yy:mm:dd'
+                          }
+                        );
+                      } );
+
+
+                      
+    
+</script>
+               
+      <center>
+             <button type="submit" name="submit" class="btn btn2 btn-success">Register</button>
+            </center>   
+            </div>
+        </form>
+</div>
+
+ </body>
+</html>

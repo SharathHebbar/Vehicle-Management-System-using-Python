@@ -1,0 +1,56 @@
+
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vehicle Registration</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+     
+       <link rel="stylesheet" href={% static 'css/login.css' %}>
+       <link rel="stylesheet"  href={% static 'css/landing_page.css' %}>
+       <link rel="stylesheet" href= {% static "css/select.css" %}>
+
+    
+    </head>
+    <body style="background-color:white";>
+     <div class="container">
+	<center>
+                <div class="details">
+                 <a href="/index"><button class="btn">back</button></a>
+                 <a href="/logout"><button class="btn">Logout</button></a><br/><br/>
+	 </div>   
+               </center>
+            <div class="container">
+           <form action="/" method="POST" enctype="multipart/form-data">
+		   <div class="details">
+		  <center> <h2>Vehicle Registration</h2></center><br>
+           <input type="text" name="V_id" placeholder="Vehicle id" required="required" /> <br/>
+           <input type="file" name="fileToUpload" id="fileToUpload" required>
+
+           <input type="text" name="V_model" placeholder="Model" required="required" /> <br/>
+           
+           <div class="custom-select" style="width:200px;">
+           <select name="V_type" >
+            <option value="Car">Car</option>
+            <option value="Bike">Bike</option>
+            <option value="Truck">Truck</option>
+            <option value="Auto">Auto</option>
+            <option value="Bus">Bus</option>
+          </select>
+          </div>
+ 
+           <input type="text" name="V_reg_no" placeholder="Registration number" required="required" /> <br/>
+           <input type="text" name="Mfg_year" placeholder="Manufactured year" required="required" /> <br/>
+           <input type="text" name="Ins_no" placeholder="Insurance number" required="required" /> <br/>
+           <input type="text" name="Eng_no" placeholder="Engine number" required="required" /> <br/>
+        <center>
+           <button type="submit" name="submit" class="btn btn2 btn-success">Register</button>
+		</center>	
+        </div>
+        </form>
+</div>    
+ </body>
+</html>

@@ -1,0 +1,65 @@
+
+{% load static %}
+
+<html>
+    <head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Driver Registration</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="sweetalert2/sweetalert2.css">
+    <script src="sweetalert2/sweetalert2.min.js"></script>
+   
+       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+       
+       
+       <link rel="stylesheet" href={% static 'css/login.css' %}>
+       <link rel="stylesheet"  href={% static 'css/landing_page.css' %}>
+       <link rel="stylesheet" href= {% static "css/select.css" %}>
+    </head>
+    <body style="background-color:white";>
+  
+      <center>
+        <div class="details">
+         <a href="/index"><button class="btn">back</button></a>
+         <a href="/logout"><button class="btn">Logout</button></a><br/><br/>
+</div>   
+       </center>
+             
+           <form action="driver.php" method="POST" enctype="multipart/form-data">
+          <center>
+		   <div class="details">
+		 <h2>Driver Registration</h2><br/>
+           
+           <input type="text" name="D_name" placeholder="Driver Name" required="required" /><br/>
+           <div class="custom-select" style="width:200px;">
+            <select name="gender" >
+             <option value="Male">Male</option>
+             <option value="Female">Female</option>
+             <option value="Others">Others</option>
+           </select>
+           </div>
+
+           <input type="file" name="fileToUpload" id="fileToUpload" required>
+           
+           
+           <input type="text" name="Phone_no" placeholder="Phone Number" required="required" /><br/>
+          <input type="text"  name="D_license" placeholder="License No"><br/>
+          <input id="D_l_valid" type="text" class="form-control" name="D_l_valid" placeholder="Validity date [format(yyyy-mm-dd)]">        
+           <input type="text" name="House_no" placeholder="House Number" required="required" /><br/>
+           <input type="text" name="Street" placeholder="Street Name/Number" required="required" /><br/>
+           <input type="text" name="City" placeholder="City" required="required" /><br/>
+           <input type="text" name="Pincode" placeholder="Pincode" required="required" /><br/>
+           <input type="text" name="vid" placeholder="Vehicle id" required="required" /> <br/>
+            <button type="submit" name="submit" class="btn btn2 btn-success">Register</button>
+      </div>
+    </center>
+        </form>
+</div>
+ </body>
+</html>
